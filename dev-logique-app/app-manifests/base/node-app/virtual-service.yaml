@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: vs-node-app
+spec:
+  hosts:
+    - "node.logique-rustamapm.com"
+  gateways:
+    - devops/logique-internal-ingress
+  http:
+    - route:
+        - destination:
+            host: node-app
+            port:
+              number: 80

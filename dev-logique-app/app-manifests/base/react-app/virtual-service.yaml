@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: vs-react-app
+spec:
+  hosts:
+    - "dashoard.logique-rustamapm.com"
+  gateways:
+    - devops/logique-internal-ingress
+  http:
+    - route:
+        - destination:
+            host: react-app
+            port:
+              number: 80

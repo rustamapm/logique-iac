@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-logique-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: dev-logique-project
+  source:
+    repoURL: https://github.com/rustamapm/logique-iac.git
+    targetRevision: main
+    path: dev-logique-app/app-manifests
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev-logique

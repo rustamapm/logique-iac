@@ -1,0 +1,6 @@
+- op: replace
+  path: "/spec/hosts/0"
+  value: "prd-node.logique-rustamapm.com"
+- op: replace
+  path: "/spec/gateways/0"
+  value: "devops/logique-internal-ingress"
