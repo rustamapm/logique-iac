@@ -24,7 +24,7 @@ patches:
 
 images:
 - name: node-app
-  newName: http://asia-southeast2-docker.pkg.dev/devops-412909/logique-registry/app-nodejs
+  newName: asia-southeast2-docker.pkg.dev/devops-412909/logique-registry/app-nodejs
   newTag: main
 
 namespace: dev-logique
