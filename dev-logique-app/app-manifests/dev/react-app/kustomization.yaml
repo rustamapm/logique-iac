@@ -9,6 +9,12 @@ commonLabels:
   tier: frontend
 
 patches:
+- path: deployment-patch.yaml
+  target:
+    group: apps
+    kind: Deployment
+    name: react-app
+    version: v1
 - path: virtual-service-patch.yaml
   target:
     group: networking.istio.io
