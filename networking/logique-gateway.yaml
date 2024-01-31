@@ -1,0 +1,24 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: logique-internal-ingress
+  namespace: devops
+spec:
+  selector:
+    app: istio-ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: internal-ingress-http
+        protocol: HTTP
+      hosts:
+        - "*.logique-rustamapm.com"
+    - port:
+        number: 443
+        name: internal-ingress-https
+        protocol: HTTPS
+      hosts:
+        - "*.logique-rustamapm.com"
+      tls:
+        mode: SIMPLE
+        credentialName: logique-rustamapm-tls

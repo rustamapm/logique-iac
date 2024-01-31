@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: vs-argocd
+  namespace: devops
+spec:
+  hosts:
+    - "argocd.logique-rustamapm.com"
+  gateways:
+    - devops/logique-internal-ingress
+  http:
+    - route:
+        - destination:
+            host: argocd-server.argocd.svc.cluster.local
+            port:
+              number: 80
