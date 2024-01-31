@@ -2,7 +2,6 @@ commonLabels:
   env: dev
   project: logique-app
 
-
 resources:
 - _serviceaccount
 - node-app
