@@ -24,7 +24,7 @@ patches:
 
 images:
 - name: react-app
-  newName: hhttp://asia-southeast2-docker.pkg.dev/devops-412909/logique-registry/app-reactjs
+  newName: asia-southeast2-docker.pkg.dev/devops-412909/logique-registry/app-reactjs
   newTag: main
 
 namespace: dev-logique
